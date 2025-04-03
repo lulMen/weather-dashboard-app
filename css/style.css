@@ -1,3 +1,10 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -5,6 +12,12 @@ body {
     background-color: #eef2f7;
     text-align: center;
     color: #333;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 /* Header */
@@ -47,6 +60,11 @@ header button {
 header button:hover {
     background: #f0f0f0;
     transform: scale(1.05);
+}
+
+/* Main */
+main {
+    flex: 1;
 }
 
 /* Search Sections */
@@ -180,11 +198,11 @@ header button:hover {
 
 /* Footer */
 footer {
-    margin-top: 30px;
     padding: 15px;
     background: #007bff;
     color: white;
     font-size: 0.9rem;
+    text-align: center;
 }
 
 footer a {
