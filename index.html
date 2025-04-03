@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script type="module" src="/js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Optionally, add your logo here -->
+        <h1>Weather Dashboard</h1>
+        <input type="text" id="searchInput" placeholder="Enter city name...">
+        <button id="searchBtn">Search</button>
+    </header>
+
+    <main>
+        <!-- Section to display search results if multiple matches are found -->
+        <section id="searchResults"></section>
+
+        <!-- Section to display the current weather data -->
+        <section id="currentWeather">
+            <h2 id="cityName"></h2>
+            <div id="weatherIcon"></div>
+            <p id="temperature"></p>
+            <p id="condition"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+        </section>
+
+        <!-- Section to display the 5-day weather forecast -->
+        <section id="forecast">
+            <h2>5-Day Forecast</h2>
+            <div id="forecastContainer">
+                <!-- Forcast cards will be injected here -->
+            </div>
+        </section>
+
+        <!-- Section to display the recent searches -->
+        <section id="recentSearches">
+            <h2>Recent Searches</h2>
+            <button id="clearHistory">Clear History</button>
+            <ul id="search-history">
+                <!-- Search history buttons will be injected here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Weather Dashboard | <a href="#">About</a> | <a href="#">Contact</a> </p>
+    </footer>
+
+</body>
+
+</html>
