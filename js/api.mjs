@@ -2,6 +2,7 @@ const GEO_API_URL = "http://api.openweathermap.org/geo/1.0/direct";
 const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
 const FORECAST_API_URL = "https://api.openweathermap.org/data/2.5/forecast";
 const API_KEY = "58f93690b92e10b5e82edf914afdbfcd";
+// const API_KEY = process.env.OPENWEATHERMAP_API_KEY;
 
 // Function to get latitude and longitude from a city name
 export async function getCoordinates(cityName) {

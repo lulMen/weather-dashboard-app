@@ -1,7 +1,7 @@
 /* For devices with a max-width of 600px (mobile phones) */
 @media screen and (max-width: 600px) {
 
-    /* Header: stack items vertically and use full width for inputs/buttons */
+    /* Header */
     header {
         flex-direction: column;
         padding: 15px;
@@ -18,7 +18,7 @@
         font-size: 1rem;
     }
 
-    /* Current Weather: use more of the available width */
+    /* Current Weather */
     #currentWeather {
         width: 95%;
         margin: 10px auto;
@@ -26,7 +26,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Forecast Section: stack forecast cards vertically */
+    /* Forecast Section */
     #forecastContainer {
         flex-direction: column;
         gap: 15px;
@@ -40,7 +40,7 @@
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
     }
 
-    /* Recent Searches: ensure the container and list items use available space */
+    /* Recent Searches */
     #recentSearches {
         width: 95%;
         margin: 10px auto;
@@ -53,7 +53,7 @@
         font-size: 0.95rem;
     }
 
-    /* Footer: adjust text size and padding for smaller screens */
+    /* Footer */
     footer {
         font-size: 0.8rem;
         padding: 10px;
