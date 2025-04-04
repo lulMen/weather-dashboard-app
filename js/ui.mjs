@@ -1,4 +1,4 @@
-import { kelvtoFahr } from "./utility.mjs";
+import { kelvtoFahr, titleCase } from "./utility.mjs";
 
 const ICON_URL = "https://openweathermap.org/img/wn/";
 
@@ -48,7 +48,7 @@ export function renderCurrentWeather(data) {
         `;
     }
     updateElement('temperature', `Temp: ${kelvtoFahr(data.main.temp)}\u00B0`);
-    updateElement('condition', `${data.weather[0].description.toUpperCase()}`);
+    updateElement('condition', `${titleCase(data.weather[0].description)}`);
     updateElement('humidity', `Humidity: ${data.main.humidity}%`);
     updateElement('windSpeed', `Wind Speed: ${data.wind.speed} mph`);
 }
