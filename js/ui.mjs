@@ -47,10 +47,10 @@ export function renderCurrentWeather(data) {
             <img src="${ICON_URL}${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}">
         `;
     }
-    updateElement('temperature', kelvtoFahr(data.main.temp) + "\u00B0");
-    updateElement('condition', data.weather[0].description);
-    updateElement('humidity', data.main.humidity);
-    updateElement('windSpeed', data.wind.speed);
+    updateElement('temperature', `Temp: ${kelvtoFahr(data.main.temp)}\u00B0`);
+    updateElement('condition', `${data.weather[0].description.toUpperCase()}`);
+    updateElement('humidity', `Humidity: ${data.main.humidity}%`);
+    updateElement('windSpeed', `Wind Speed: ${data.wind.speed} mph`);
 }
 
 export function renderForecast(forecastData) {
@@ -73,7 +73,6 @@ export function renderForecast(forecastData) {
     const forecastHTML = forecastData.list
         .slice(1, 6)
         .map((day, i) => {
-            // const dayNumber = String(i + 1).padStart(2, "0");
             const forecastDay = dayNames[(todayIndex + i + 1) % 7];
             return `
                 <div class="forecastCard">

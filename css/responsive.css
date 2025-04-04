@@ -1,21 +1,31 @@
-/* For devices with a max-width of 600px (mobile phones) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
     /* Header */
     header {
         flex-direction: column;
         padding: 15px;
+        gap: 10px;
+        text-align: center;
     }
 
     header input {
-        width: 100%;
+        width: 95%;
         margin-bottom: 10px;
         font-size: 1rem;
     }
 
     header button {
-        width: 100%;
+        width: 99%;
         font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
     }
 
     /* Current Weather */
