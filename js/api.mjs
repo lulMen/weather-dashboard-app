@@ -1,6 +1,7 @@
 const GEO_API_URL = "http://api.openweathermap.org/geo/1.0/direct";
 const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
 const FORECAST_API_URL = "https://api.openweathermap.org/data/2.5/forecast";
+// const ONE_CALL_API_URL = "https://api.openweathermap.org/data/3.0/onecall";
 const API_KEY = "58f93690b92e10b5e82edf914afdbfcd";
 // const API_KEY = process.env.OPENWEATHERMAP_API_KEY;
 
@@ -27,6 +28,7 @@ export async function getCurrentWeather(lat, lon) {
     console.log(lat, lon);
     try {
         const response = await fetch(`${WEATHER_API_URL}?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+        // const response = await fetch(`${ONE_CALL_API_URL}?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
         if (!response.ok) throw new Error("Failed to fetch weather data");
 
         return await response.json();

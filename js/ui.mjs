@@ -47,7 +47,9 @@ export function renderCurrentWeather(data) {
             <img src="${ICON_URL}${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}">
         `;
     }
-    updateElement('temperature', `Temp: ${kelvtoFahr(data.main.temp)}\u00B0`);
+    updateElement('temperature', `Current: ${kelvtoFahr(data.main.temp)}\u00B0`);
+    // updateElement('highTemperature', `High: ${kelvtoFahr(data.main.temp_max)}\u00B0`);
+    // updateElement('lowTemperature', `Low: ${kelvtoFahr(data.main.temp_min)}\u00B0`);
     updateElement('condition', `${titleCase(data.weather[0].description)}`);
     updateElement('humidity', `Humidity: ${data.main.humidity}%`);
     updateElement('windSpeed', `Wind Speed: ${data.wind.speed} mph`);
@@ -70,6 +72,7 @@ export function renderForecast(forecastData) {
     ];
     const todayIndex = new Date().getDay();
 
+    console.log(forecastData);
     const forecastHTML = forecastData.list
         .slice(1, 6)
         .map((day, i) => {
@@ -79,7 +82,7 @@ export function renderForecast(forecastData) {
                     <p>${forecastDay}</p>
                     <img src="${ICON_URL}${day.weather[0].icon}.png"
                     alt="${day.weather[0].description}">
-                    <p>${kelvtoFahr(day.main.temp)}\u00B0</p>
+                    <p>High: ${kelvtoFahr(day.main.temp_max)}\u00B0 Low: ${kelvtoFahr(day.main.temp_min)}\u00B0</p>   
                 </div>
             `;
         })
